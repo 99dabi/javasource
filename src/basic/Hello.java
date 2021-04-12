@@ -8,11 +8,10 @@ public class Hello {
 		//ctrl+d => 커서 있는 라인 삭제
 		System.out.println("Hello");
 		System.out.println("Hello");
-		System.out.println("Hello");
-		System.out.println("Hello");
-		System.out.println("Hello");
 		System.out.println("안녕하세요 ");
 		System.out.println("반갑습니다.");
+		System.out.println("오늘은");
+		System.out.println("월요일");
 
 		
 	}

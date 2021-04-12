@@ -21,7 +21,7 @@ public class Hello {
 		System.out.println("월요일");
 
 		System.out.println("github 연결");
-		
+		System.out.println("github -marster");
 	}
 
 }

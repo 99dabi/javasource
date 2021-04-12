@@ -7,11 +7,10 @@ public class Hello {
 		//ctrl+alt+화살표 => 화살표 방향으로 복사
 		//ctrl+d => 커서 있는 라인 삭제
 		System.out.println("Hello");
-		System.out.println("Hello");
-		System.out.println("Hello");
-		System.out.println("Hello");
-		System.out.println("Hello");
 		System.out.println("안녕하세요 ");
+		System.out.println("반갑습니다.");
+		System.out.println("반갑습니다.");
+		System.out.println("비가오네요.");
 		System.out.println("반갑습니다.");
 
 		

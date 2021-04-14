@@ -6,15 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
-public class FileReaderEx1 {
+public class FileReaderEx2 {
 	public static void main(String[] args) {
-		//Reader / Writer => 문자 단위
-		//InputStream/OutputStream =>바이트 단위 
+
 		FileReader reader =null;
 		try {
-			//reader = new FileReader("c:\\test\\file1.txt");
-			reader = new FileReader("c:\\test\\file1.txt",
-					Charset.forName("ms949"));
+			reader = new FileReader("c:\\test\\output1.txt");
 			int ch=0;
 			while((ch=reader.read())!=-1) {
 				System.out.print((char)ch);

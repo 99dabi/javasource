@@ -14,6 +14,7 @@ public class FileWriterEx {
 			writer.write("Writer 클래스는 문자 단위\r\n");
 			writer.write("출력만 가능");
 		} catch (Exception e) {	
+		
 		}
 	}
 }

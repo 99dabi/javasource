@@ -25,7 +25,7 @@ public class FileEx2 {
 		//pathSepatator - ;형태로 나옴
 		System.out.println("File.pathSepatator - "+File.pathSeparator);
 		System.out.println("File.pathSepatator - "+File.pathSeparatorChar);
-		//separator - \형태로 나옴
+		//separator - \형태로 ㅁ옴
 		System.out.println("File.separator - "+File.separator);
 		System.out.println("File.separatorChar - "+File.separatorChar);
 		System.out.println();

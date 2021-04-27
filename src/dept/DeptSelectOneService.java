@@ -4,13 +4,15 @@ import static emp.jdbcUtil.*;
 import java.sql.Connection;
 
 public class DeptSelectOneService {
-	public DeptVo getRow(int empno) {
+	public DeptVo getRow(int deptno){
 		
 		Connection con = getConnection();
-		DeptDAO dao = new DeptDAO(con);
+		DeptDAO dao = new DeptDAO(con);	
 		
+		DeptVo vo = dao.selectOne(deptno);
 		
-		DeptVo vo = dao.selectOne(empno);
+		close(con);
+		
 		return vo;
 	}
 }

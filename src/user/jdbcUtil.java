@@ -1,4 +1,4 @@
-package emp;
+package user;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,8 +22,8 @@ public class jdbcUtil {
 			try {
 				
 				String url = "jdbc:oracle:thin:@localhost:1521:xe";
-				String user = "scott";
-				String password = "TIGER";
+				String user = "JAVADB";
+				String password = "12345";
 				
 				con = DriverManager.getConnection(url, user, password);
 				// 개발자가 직접 트랜잭션 제어

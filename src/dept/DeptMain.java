@@ -17,7 +17,7 @@ public class DeptMain {
 			
 			System.out.println("메뉴 >>");
 			int menu = Integer.parseInt(sc.nextLine());
-			
+			String loc=null;
 			switch (menu) {
 			case 1:
 				System.out.println("부서 번호 입력 >> ");
@@ -39,28 +39,29 @@ public class DeptMain {
 				}
 				break;
 			case 3:
-//				System.out.println("\n부서 정보");
-//				System.out.print("부서번호 >>");
-//				deptno = Integer.parseInt(sc.nextLine());
-//				System.out.print("부서명 >> ");
-//				String dname = sc.nextLine();
-//				System.out.print("부서위치 >> ");
-//				String loc = sc.nextLine();
-//
-//				DeptVo vo1 = new DeptVo();
-//				vo1.setDeptno(deptno);
-//				vo1.setDname(dname);
-//				vo1.setLoc(loc);
-//				
-//				System.out.println(dao.insert(vo1)?"입력성공":"입력 실패");
-//				
+				System.out.println("\n부서 정보");
+				System.out.print("부서번호 >>");
+				deptno = Integer.parseInt(sc.nextLine());
+				System.out.print("부서명 >> ");
+				String dname = sc.nextLine();
+				System.out.print("부서위치 >> ");
+				loc = sc.nextLine();
+
+				DeptVo vo1 = new DeptVo();
+				vo1.setDeptno(deptno);
+				vo1.setDname(dname);
+				vo1.setLoc(loc);
+				DeptInsertService deptInsert = new DeptInsertService();
+				boolean isInsert = deptInsert.deptInsert(vo1);
+				System.out.println(isInsert?"입력성공":"입력 실패");
+				
 				break;
 			case 4:
 				System.out.println("\n부서 정보 수정");
 				System.out.println("수정할 부서 번호 입력 >> ");
 				deptno = Integer.parseInt(sc.nextLine());
 				System.out.println("수정할 지역명 입력 >> ");
-				String loc = sc.nextLine();
+				loc = sc.nextLine();
 				
 				DeptUpdateService updateService = new DeptUpdateService();
 				

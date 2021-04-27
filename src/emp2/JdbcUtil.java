@@ -1,4 +1,4 @@
-package emp;
+package emp2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class jdbcUtil {
+public class JdbcUtil {
 
 	//static : 클래스 작성 완료가 되면 메모리에 로드
 		static {

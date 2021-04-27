@@ -65,36 +65,29 @@ public class DeptDAO {
 	}//deptSelect
 	
 	public DeptVo selectOne(int deptno) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;	
 		String sql = "select * from dept_temp where deptno=?";
 		DeptVo vo = null;
-		
-		con = getConnection();
-		try {
-			PreparedStatement pstmt=null;
-			ResultSet rs=null;
-			
+		try {			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, deptno);
-			rs=pstmt.executeQuery();
-		
+			rs = pstmt.executeQuery();
+			
 			if(rs.next()) {
 				vo = new DeptVo();
 				vo.setDeptno(rs.getInt("deptno"));
 				vo.setDname(rs.getString("dname"));
 				vo.setLoc(rs.getString("loc"));
-				
-			}
-		
+				System.out.println();
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}	finally {
-			try {
-				close(rs);
-				close(pstmt);
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-		}return vo;
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return vo;
 	}//selectOne end
 	
 	//INSERT 담당

@@ -2,21 +2,21 @@ package dept;
 
 import java.sql.Connection;
 import static emp.jdbcUtil.*;
-public class DeptUpdateService {
-	public boolean deptUpdate(String loc,int deptno) {
-		boolean isUpdate = false;
+
+public class DeptInsertService {
+	public boolean deptInsert(DeptVo vo) {
+		boolean isInsert = false;
 		
 		Connection con = getConnection();
 		DeptDAO dao = new DeptDAO(con);
 		
-		if(dao.update(loc, deptno)) {
+		if(dao.insert(vo)) {
 			commit(con);
-			isUpdate = true;
+			isInsert=true;
 		}else {
 			rollback(con);
 		}
 		
-		close(con);
-		return isUpdate;
+		return isInsert;
 	}
 }

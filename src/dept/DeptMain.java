@@ -64,7 +64,6 @@ public class DeptMain {
 				loc = sc.nextLine();
 				
 				DeptUpdateService updateService = new DeptUpdateService();
-				
 				boolean isUpdate = updateService.deptUpdate(loc,deptno);
 				
 				System.out.println(isUpdate?"수정 성공":"수정 실패");

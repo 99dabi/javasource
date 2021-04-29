@@ -20,8 +20,6 @@ public class EmpRemoveAction implements Action{
 			util.printRemoveSuccessMessage();
 		}else {
 			util.printRemoveFailMessage();
-		}
-			
+		}		
 	}
-
 }

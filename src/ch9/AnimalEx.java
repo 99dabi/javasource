@@ -13,5 +13,4 @@ public class AnimalEx {
 	public static void animalSound(Animal animal) {
 		animal.sound();
 	}
-
 }

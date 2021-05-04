@@ -7,12 +7,18 @@ import java.util.Scanner;
 public class ConsoleUtil {
 	//화면 출력과 화면에서 입력받는 부분에 대한 메소드 
 	// = ui구문
-	public int getEmp(Scanner sc) {
-	System.out.print("사원번호를 입력하세요 : ");
-	int empno = Integer.parseInt(sc.nextLine());
-	
-	return empno;
-	}
+//	public int getEmp(Scanner sc) {
+//	System.out.print("사원번호를 입력하세요 : ");
+//	int empno = Integer.parseInt(sc.nextLine());
+//	
+//	return empno;
+//	}
+	public String getEmp(Scanner sc) {
+		System.out.print("사원번호를 입력하세요 : ");
+		String ename = sc.nextLine();
+		
+		return ename;
+		}
 	public void printEmp(EmpVO vo) {
 
 			System.out.print("empno :"+vo.getEmpno()+"\t");
@@ -22,8 +28,11 @@ public class ConsoleUtil {
 			System.out.print("comm :"+vo.getComm()+"\t");
 			System.out.print("deptno :"+vo.getDeptno()+"\n");
 	}
-	public void printFailMessage(int empno) {
-		System.out.println(empno+" : 사원번호를 확인해 주세요 ");		
+//	public void printFailMessage(int empno) {
+//		System.out.println(empno+" : 사원번호를 확인해 주세요 ");		
+//	}
+	public void printFailMessage(String ename) {
+		System.out.println(ename+" : 사원번호를 확인해 주세요 ");		
 	}
 	public void printListEmp(List<EmpVO> list) {
 		for (EmpVO vo:list) {

@@ -88,7 +88,42 @@ public class EmpDAO {
 			}	
 		}return vo;
 	}
-	
+	public EmpVO selectOne(String ename) {
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql ="select * from emp_temp where ename like ?";
+		
+		EmpVO vo = null;
+		try {
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,"%"+ename+"%");//? 에대한 세팅 구문(숫자 : 물음표 순서)
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo = new EmpVO();
+				vo.setEmpno(rs.getInt("empno"));
+				vo.setEname(rs.getString("ename"));
+				vo.setJob(rs.getString("job"));
+				vo.setMgr(rs.getInt("mgr"));
+				vo.setHiredate(rs.getDate("hiredate"));
+				vo.setSal(rs.getInt("sal"));
+				vo.setComm(rs.getInt("comm"));
+				vo.setDeptno(rs.getInt("deptno"));
+			
+				System.out.println();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				close(rs);
+				close(pstmt);	
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}	
+		}return vo;
+	}
 
 	public int insert(EmpVO vo) {
 		PreparedStatement pstmt=null;
